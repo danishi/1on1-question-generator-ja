@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.css-results-block{
+  min-height: 75vw;
+}
+
+.progress {
+  width: 80%;
+  height: 50px;
+  padding-top: 25vh;
+}
+
+.progress-bar3 {
+  height: 18px;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #7DC8E8, #5856d6, #ff2d55);
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-infinite .progress-bar3 {
+  width: 100%;
+  background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #7DC8E8, #5856d6, #ff2d55);
+  animation: colorAnimation 1s infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #7DC8E8, #5856d6, #ff2d55);
+  }
+  20% {
+    background-image: linear-gradient(to right, #5ac8fa, #007aff, #7DC8E8, #5856d6, #ff2d55, #4cd964);
+  }
+  40% {
+    background-image: linear-gradient(to right, #007aff, #7DC8E8, #5856d6, #ff2d55, #4cd964, #5ac8fa);
+  }
+  60% {
+    background-image: linear-gradient(to right, #7DC8E8, #5856d6, #ff2d55, #4cd964, #5ac8fa, #007aff);
+  }
+  100% {
+    background-image: linear-gradient(to right, #5856d6, #ff2d55, #4cd964, #5ac8fa, #007aff, #7DC8E8);
+  }
+}
