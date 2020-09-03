@@ -44,9 +44,9 @@ function App() {
 
         </div> 
         <div className="w-full text-center flex-initial">
-          <a className="text-xs text-blue-500 hover:text-blue-800" href="https://github.com/VGraupera/1on1-questions" target="_blank">1on1-questions on Github</a>
+          <a rel="noopener noreferrer" className="text-xs text-blue-500 hover:text-blue-800" href="https://github.com/VGraupera/1on1-questions" target="_blank">1on1-questions on Github</a>
           &nbsp;&nbsp;&nbsp;
-          <a className="text-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-4"
+          <a className="text-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-4" rel="noopener noreferrer"
           href="https://twitter.com/intent/tweet?text=1%20on%201%20Meeting%20Questions%20generator">
         Tweet</a>
 
