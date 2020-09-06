@@ -30,12 +30,13 @@ function App() {
         </div>
         <div className="w-full flex-wrap flex justify-center css-results-block">
             {/* loding block */}
-            {loading ? (<div className="progress progress-infinite">
+            {loading ? (<div data-testid="loader-ribbon" className="progress progress-infinite">
                           <div className="progress-bar3" >
                           </div>                       
                         </div>)  : null}
             {/* list */}
-            {(!loading) ? <section data-testid="questions-list-loaded">
+            {(!loading && list.length) ? <section data-testid="questions-list-loaded">
+              {JSON.stringify(list)}
                {list.map((data, index) => <Item data={data} key={index}/>)}
            </section> : null}
         </div>

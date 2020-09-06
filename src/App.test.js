@@ -34,15 +34,43 @@ beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
-test('loads and displays greeting', async () => {
+test('shows loader on click', async () => {
   render(<App/>)
 
   fireEvent.click(screen.getByText('Choose'))
 
-  const list = await screen.findAllByTestId('questions-list-loaded');
-  //debug();
+  const loader = await screen.findAllByTestId('loader-ribbon');
+  expect(loader).toHaveLength(1)
+})
 
-  expect(list).toHaveLength(1)
+test('loads data and displays', async () => {
+
+  server.use(
+    rest.get('http://localhost:3001/', (req, res, ctx) => {
+      return res(ctx.json({data: [{
+        "id": 306,
+        "question": "If you were me, what changes would you make?",
+        "category": "About Manager",
+        "created_at": "2017-11-18T14:26:13.870Z",
+        "updated_at": "2017-11-18T14:26:13.870Z"
+      },
+      {
+        "id": 307,
+        "question": "How do you prefer to receive feedback?",
+        "category": "About Manager",
+        "created_at": "2017-11-18T14:26:13.874Z",
+        "updated_at": "2017-11-18T14:26:13.874Z"
+      }]}))
+    })
+  )
+
+  render(<App/>)
+
+  fireEvent.click(screen.getByText('Choose'))
+  const list = await screen.findAllByTestId('questions-list-loaded');
+
+  // expect(list).toHaveLength(1)
+  expect(list.textContent).toHaveContent('')
 })
 
 
