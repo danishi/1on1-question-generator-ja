@@ -18,7 +18,7 @@ describe('Cypress', () => {
 
     it('title is present', () => {
         cy.get('.App')
-        .get('h1.text-center.text-4x')
+        .get('h1')
         .should('have.length', 1)
     })
     

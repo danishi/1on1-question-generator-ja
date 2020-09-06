@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 //import anime from 'animejs/lib/anime.es.js';
 import {Item} from './Item';
-import {getQuestions} from './service';
+import {getQuestions} from './services/service';
 
 import './tailwind.output.css';
 import './index.css';
@@ -57,3 +57,4 @@ function App() {
 }
 
 export default App;
+
