@@ -12,14 +12,10 @@ code {
     monospace;
 }
 
-.css-results-block{
-  min-height: 75vw;
-}
-
 .progress {
   width: 80%;
   height: 50px;
-  padding-top: 25vh;
+  padding: 25vh 0;
 }
 
 .progress-bar3 {

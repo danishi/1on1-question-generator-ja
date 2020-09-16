@@ -35,10 +35,8 @@ function App() {
                           </div>                       
                         </div>)  : null}
             {/* list */}
-            {(!loading && list.length) ? <section data-testid="questions-list-loaded">
-              {JSON.stringify(list)}
-               {list.map((data, index) => <Item data={data} key={index}/>)}
-           </section> : null}
+            {(!loading && list.length) ?list.map((data, index) => <Item data={data} key={index}/>)
+            : null}
         </div>
         <div className="w-full text-center flex-initial mt-2 mb-4">
              {/* buttons */}
