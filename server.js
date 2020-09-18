@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const cors = require('@koa/cors');
 
-const q = require('./data/questions.json')
+const q = require('./src/mocks/questions.json')
 
 const app = new Koa();
 app.use(cors());

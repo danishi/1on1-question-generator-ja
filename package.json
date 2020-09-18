@@ -17,8 +17,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:e2e": "react-scripts start REACT_APP_LOCAL_SERVER=e2e",
     "build": "react-scripts build CI=react-scripts build",
     "test": "react-scripts test",
+    "test:e2e": "npm run server && npm run cypress && npm run start:e2e",
     "eject": "react-scripts eject",
     "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
     "prestart": "npm run build:tailwind",
