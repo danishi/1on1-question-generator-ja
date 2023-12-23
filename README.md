@@ -1,3 +1,5 @@
+# 1on1 questions generator for japanese
+
 This project based on [VGraupera/1on1-questions](https://github.com/VGraupera/1on1-questions) and [react-tailwind-question-generator](https://github.com/shershen08/react-tailwind-question-generator).
 
 ## Available Scripts
