@@ -9,18 +9,24 @@ const server = setupServer(
   rest.get('/', (req, res, ctx) => {
     return res(ctx.json({
       "id": 306,
-      "question": "If you were me, what changes would you make?",
+      "question": {
+        "en": "If you were me, what changes would you make?",
+        "ja_JP": "あなたが私だったら、どんなことを変えますか？"
+      },
       "category": "About Manager",
       "created_at": "2017-11-18T14:26:13.870Z",
       "updated_at": "2017-11-18T14:26:13.870Z"
     },
     {
       "id": 307,
-      "question": "How do you prefer to receive feedback?",
+      "question": {
+        "en": "How do you prefer to receive feedback?",
+        "ja_JP": "どんな風にフィードバックを受け取りたいですか？"
+      },
       "category": "About Manager",
       "created_at": "2017-11-18T14:26:13.874Z",
       "updated_at": "2017-11-18T14:26:13.874Z"
-    }))
+    },))
   })
 )
 
